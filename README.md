@@ -1,16 +1,44 @@
-# React + Vite
+# 🧑‍💻 Portfolio — Crapanzano Alexandre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur mon **portfolio personnel**, développé avec **React.js/Tailwind.css**.  
+Ce site présente mon parcours, mes compétences techniques et humaines, mes projets ainsi que mes expériences professionnelles et associatives.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies utilisées
 
-## React Compiler
+- **React.js** — Framework principal pour la structure du site  
+- **JavaScript (ES6+)** — Logique et interactions dynamiques  
+- **HTML5 / TailwindCss** — Structure et mise en page  
+- **EmailJS** — Envoi des messages via le formulaire de contact  
+- **Vite** — Environnement de développement rapide  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧭 Navigation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Le site est organisé en plusieurs sections accessibles via la barre de navigation :
+
+| Section | Description |
+|----------|--------------|
+| **Profil** | Présentation personnelle et objectifs professionnels |
+| **Formation** | Parcours académique |
+| **Projets** | Sélection de projets réalisés et liens externes |
+| **Hardskills** | Compétences techniques (langages, frameworks, outils, etc.) |
+| **Softskills** | Qualités humaines et relationnelles |
+| **Expériences** | Expériences professionnelles |
+| **Association** | Implications associatives  |
+| **Contact** | Formulaire de contact via EmailJS |
+
+---
+
+## 💡 Fonctionnalités principales
+
+- 🌐 **Design responsive** — Adapté à tous les écrans  
+- 💌 **Formulaire de contact fonctionnel** (EmailJS)  
+- 🎠 **Carrousel de projets** interactif  
+- 📄 **Téléchargement du CV**  
+- 🔗 **Liens externes** vers GitHub, LinkedIn, etc.  
+- 🎨 **Interface moderne et fluide**
+
+---
