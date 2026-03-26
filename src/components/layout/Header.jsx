@@ -1,53 +1,64 @@
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
-  { label: 'Profil', href: '#profil' },
-  { label: 'Formation', href: '#formation' },
-  { label: 'Projets', href: '#projets' },
-  { label: 'Hardskills', href: '#hardskills' },
-  { label: 'Softskills', href: '#softskills' },
-  { label: 'Expériences', href: '#experiences' },
-  { label: 'Association', href: '#association' },
-  { label: 'CV', href: '#cv' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Profil',       href: '#profil' },
+  { label: 'Formation',    href: '#formation' },
+  { label: 'Projets',      href: '#projets' },
+  { label: 'Hard skills',  href: '#hardskills' },
+  { label: 'Soft skills',  href: '#softskills' },
+  { label: 'Expériences',  href: '#experiences' },
+  { label: 'Association',  href: '#association' },
+  { label: 'CV',           href: '#cv' },
+  { label: 'Contact',      href: '#contact' },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled]     = useState(false);
 
-  const handleNavClick = () => setIsMenuOpen(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.85);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className="w-full bg-white shadow-md fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <header
+      className="w-full fixed top-0 z-50 transition-all duration-300"
+      style={{
+        backgroundColor: scrolled ? 'rgba(255,255,255,0.92)' : 'rgba(7,8,15,0.7)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: scrolled ? '1px solid #e7e5e4' : '1px solid rgba(94,207,190,0.15)',
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
 
-        <div className="flex items-center justify-between lg:justify-center py-4 lg:pt-5 lg:pb-2">
-          <h1 className="font-serif text-xl lg:text-3xl text-blue-900">
-            Alexandre Crapanzano
-          </h1>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 -mr-1 text-blue-900"
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-nav"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        <nav
-          id="mobile-nav"
-          className={`${isMenuOpen ? 'block' : 'hidden'} lg:block pb-3`}
+        <a
+          href="#"
+          className="font-serif text-lg transition-colors duration-300"
+          style={{ color: scrolled ? '#0f172a' : '#f0ece4' }}
         >
-          <ul className="flex lg:flex-row flex-col lg:justify-center lg:flex-wrap lg:gap-1 gap-1">
+          A. Crapanzano
+        </a>
+
+        {/* Desktop nav */}
+        <nav className="hidden lg:block" aria-label="Navigation principale">
+          <ul className="flex gap-0.5">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  onClick={handleNavClick}
-                  className="block uppercase text-sm font-medium text-gray-700 hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md transition-all duration-300"
+                  className="text-sm px-3 py-1.5 rounded transition-all duration-200"
+                  style={{ color: scrolled ? '#64748b' : 'rgba(240,236,228,0.65)' }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.color = '#5ecfbe';
+                    e.currentTarget.style.backgroundColor = scrolled ? '#f1faf8' : 'rgba(94,207,190,0.08)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = scrolled ? '#64748b' : 'rgba(240,236,228,0.65)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }}
                 >
                   {item.label}
                 </a>
@@ -56,7 +67,42 @@ const Header = () => {
           </ul>
         </nav>
 
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="lg:hidden p-2 rounded transition-colors"
+          style={{ color: scrolled ? '#0f172a' : '#f0ece4' }}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-nav"
+        >
+          {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
       </div>
+
+      {/* Mobile nav */}
+      {isMenuOpen && (
+        <nav
+          id="mobile-nav"
+          className="lg:hidden px-6 pb-4"
+          style={{ backgroundColor: scrolled ? 'white' : '#0d1018', borderTop: '1px solid rgba(94,207,190,0.15)' }}
+        >
+          <ul className="flex flex-col gap-0.5 pt-2">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm py-2.5 px-2 rounded transition-colors"
+                  style={{ color: scrolled ? '#475569' : 'rgba(240,236,228,0.75)' }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };

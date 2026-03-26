@@ -11,12 +11,23 @@ export default {
         serif: ['"DM Serif Display"', 'Georgia', 'serif'],
       },
       colors: {
-        primary: {
-          DEFAULT: '#1e3a5f', // blue-900
-          hover: '#1e40af',   // blue-800
+        eau: {
+          50:  '#edfaf8',
+          100: '#d0f4ef',
+          200: '#a5e9df',
+          300: '#5ecfbe',  // vert d'eau principal
+          400: '#3aafa0',  // hover / foncé
+          500: '#2a9188',
+          600: '#1f7269',
         },
-        accent: {
-          DEFAULT: '#0d9488', // teal-600
+        dark: {
+          900: '#07080f',  // fond hero
+          800: '#0d1018',
+          700: '#141b27',
+        },
+        primary: {
+          DEFAULT: '#0f172a',
+          hover:   '#1e293b',
         },
       },
     },
