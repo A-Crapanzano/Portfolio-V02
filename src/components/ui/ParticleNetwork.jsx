@@ -15,17 +15,14 @@ export default function ParticleNetwork() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // Renderer
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // Scene & Camera
     const scene  = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.z = 4.5;
 
-    // ── Particles ──────────────────────────────────────────────
     const positions = new Float32Array(PARTICLE_COUNT * 3);
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       positions[i * 3]     = (Math.random() - 0.5) * SPREAD;
@@ -45,7 +42,6 @@ export default function ParticleNetwork() {
 
     const points = new THREE.Points(pointsGeo, pointsMat);
 
-    // ── Connection lines (single LineSegments for perf) ────────
     const linePositions = [];
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       for (let j = i + 1; j < PARTICLE_COUNT; j++) {
@@ -69,13 +65,11 @@ export default function ParticleNetwork() {
 
     const lines = new THREE.LineSegments(linesGeo, linesMat);
 
-    // ── Group ──────────────────────────────────────────────────
     const group = new THREE.Group();
     group.add(points);
     group.add(lines);
     scene.add(group);
 
-    // ── Mouse interaction ──────────────────────────────────────
     const mouse = { x: 0, y: 0 };
     const onMouseMove = (e) => {
       mouse.x = (e.clientX / window.innerWidth  - 0.5) * 0.6;
@@ -83,7 +77,6 @@ export default function ParticleNetwork() {
     };
     window.addEventListener('mousemove', onMouseMove);
 
-    // ── Animation ──────────────────────────────────────────────
     let autoY = 0, autoX = 0;
     let rafId;
 
@@ -97,7 +90,6 @@ export default function ParticleNetwork() {
     };
     animate();
 
-    // ── Resize ────────────────────────────────────────────────
     const onResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();

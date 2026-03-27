@@ -40,7 +40,6 @@ const Experiences = () => {
       <div>
         {experiences.map((exp, idx) => (
           <div key={idx} className="flex gap-5">
-            {/* Timeline */}
             <div className="flex flex-col items-center flex-shrink-0 pt-1">
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
@@ -59,7 +58,6 @@ const Experiences = () => {
               )}
             </div>
 
-            {/* Contenu */}
             <div className={`flex-1 ${idx < experiences.length - 1 ? 'pb-10' : 'pb-2'}`}>
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
                 <h4 className="text-base font-semibold leading-snug" style={{ color: '#5ecfbe' }}>

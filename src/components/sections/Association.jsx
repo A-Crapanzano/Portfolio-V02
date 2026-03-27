@@ -19,7 +19,6 @@ const Association = () => {
     <SectionCard id="association" title="Association">
       <div className="space-y-16">
 
-        {/* ── ASMP ── */}
         <div>
           <h4
             className="flex items-center gap-2 text-xl font-semibold mb-4"
@@ -30,7 +29,6 @@ const Association = () => {
           </h4>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Texte + photo */}
             <div className="space-y-4">
               <p style={{ color: 'rgba(240,236,228,0.65)', lineHeight: '1.75' }}>
                 Les expériences associatives que j'ai pu vivre en tant que Président et Fondateur de l'ASMP furent incroyables.
@@ -74,7 +72,6 @@ const Association = () => {
               />
             </div>
 
-            {/* Vidéo finale MSL */}
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(94,207,190,0.6)' }}>
                 Finale — Palais des Sports
@@ -88,7 +85,6 @@ const Association = () => {
           </div>
         </div>
 
-        {/* ── BIM ── */}
         <div>
           <h4
             className="flex items-center gap-2 text-xl font-semibold mb-4"
@@ -99,7 +95,6 @@ const Association = () => {
           </h4>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Vidéo Gala */}
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(94,207,190,0.6)' }}>
                 Gala — Sport Beach Marseille
@@ -110,7 +105,6 @@ const Association = () => {
               />
             </div>
 
-            {/* Texte + logo */}
             <div className="space-y-4">
               <img
                 src="/images/blancarde-infirmier-marseille-523c00c643944be18655dd8aa2a82e22.jpg"

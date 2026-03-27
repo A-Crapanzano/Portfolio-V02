@@ -42,7 +42,6 @@ const Header = () => {
           A. Crapanzano
         </a>
 
-        {/* Desktop nav */}
         <nav className="hidden lg:block" aria-label="Navigation principale">
           <ul className="flex gap-0.5">
             {navItems.map((item) => (
@@ -67,7 +66,6 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Mobile hamburger */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="lg:hidden p-2 rounded transition-colors"
@@ -80,7 +78,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile nav */}
       {isMenuOpen && (
         <nav
           id="mobile-nav"

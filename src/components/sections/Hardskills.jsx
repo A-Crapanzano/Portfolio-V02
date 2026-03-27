@@ -27,7 +27,6 @@ const skills = [
 const Hardskills = () => {
   return (
     <SectionCard id="hardskills" title="Hard skills">
-      {/* Liste des stacks */}
       <ul className="flex flex-wrap gap-3 mb-12">
         {skills.map((s, idx) => (
           <li key={idx} className="flex items-center gap-2">
@@ -54,7 +53,6 @@ const Hardskills = () => {
         ))}
       </ul>
 
-      {/* Double marquee */}
       <Marquee images={techLogos} />
     </SectionCard>
   );

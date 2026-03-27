@@ -21,11 +21,6 @@ const LogoItem = ({ src, alt }) => (
   </div>
 );
 
-/**
- * Double-marquee: row 1 scrolls left, row 2 scrolls right at a different speed.
- * Fade-out edges via CSS mask.
- * Hovers pauses both rows via .marquee-container:hover in CSS.
- */
 const Marquee = ({ images }) => {
   const row1 = [...images, ...images];
   const row2 = [...[...images].reverse(), ...[...images].reverse()];
@@ -38,12 +33,10 @@ const Marquee = ({ images }) => {
         WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
       }}
     >
-      {/* Rangée 1 — vers la gauche */}
       <div className="flex gap-4 mb-4 animate-marquee-left" style={{ width: 'max-content' }}>
         {row1.map((img, i) => <LogoItem key={i} {...img} />)}
       </div>
 
-      {/* Rangée 2 — vers la droite */}
       <div className="flex gap-4 animate-marquee-right" style={{ width: 'max-content' }}>
         {row2.map((img, i) => <LogoItem key={i} {...img} />)}
       </div>

@@ -53,7 +53,6 @@ const Contact = () => {
     <SectionCard id="contact" title="Contact">
       <div className="flex flex-col md:flex-row gap-12 items-start">
 
-        {/* Réseaux */}
         <div className="md:w-1/3 space-y-6">
           <p style={{ color: 'rgba(240,236,228,0.55)', lineHeight: '1.75' }}>
             Disponible pour toute opportunité d'alternance ou collaboration. N'hésitez pas à me contacter.
@@ -86,7 +85,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Formulaire */}
         <form ref={form} onSubmit={sendEmail} className="flex-1 space-y-4">
           <div>
             <label htmlFor="name" className="block text-xs font-medium mb-2 tracking-wide" style={{ color: 'rgba(240,236,228,0.5)' }}>

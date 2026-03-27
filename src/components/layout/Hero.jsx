@@ -8,7 +8,6 @@ const Hero = () => {
     >
       <ParticleNetwork />
 
-      {/* Gradient radial subtil pour faire ressortir le texte */}
       <div className="absolute inset-0 bg-radial-gradient pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
@@ -80,7 +79,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll hint */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-scroll-hint">
         <svg
           width="22" height="22" viewBox="0 0 24 24"

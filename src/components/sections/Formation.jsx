@@ -45,7 +45,6 @@ const FormationShowcase = () => {
   return (
     <div className="flex flex-col md:flex-row gap-8 items-stretch">
 
-      {/* Tabs — liste des formations */}
       <div className="md:w-2/5 flex flex-col justify-center gap-2">
         {formations.map((f, idx) => (
           <button
@@ -87,7 +86,6 @@ const FormationShowcase = () => {
         ))}
       </div>
 
-      {/* Visuel — crossfade + progress bar */}
       <div className="md:w-3/5 flex flex-col gap-4">
         <div
           className="relative flex-1 min-h-56 rounded-xl overflow-hidden flex items-center justify-center"
@@ -111,7 +109,6 @@ const FormationShowcase = () => {
           ))}
         </div>
 
-        {/* Indicateurs + barre de progression */}
         <div className="flex items-center gap-3">
           {formations.map((_, idx) => (
             <button
