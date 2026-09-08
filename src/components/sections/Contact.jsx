@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <SectionCard id="contact" title="Contact">
-      <div className="flex flex-col md:flex-row gap-12 items-start">
+      <div className="flex flex-col md:flex-row gap-12 md:items-start">
 
         <div className="md:w-1/3 space-y-6">
           <p style={{ color: 'rgba(240,236,228,0.55)', lineHeight: '1.75' }}>
