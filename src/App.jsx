@@ -64,7 +64,7 @@ export default function Portfolio() {
       >
         <p className="font-serif text-2xl text-white mb-2">Alexandre Crapanzano</p>
         <p className="text-sm" style={{ color: 'rgba(240,236,228,0.35)' }}>
-          Alternant Développeur IA &amp; Data · Dev-id
+          Alternant Fullstack · Dev-id &amp; Epitech Marseille
         </p>
       </footer>
     </div>

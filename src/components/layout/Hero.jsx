@@ -30,7 +30,7 @@ const Hero = () => {
           className="text-xl md:text-2xl font-light mb-8 animate-fade-up"
           style={{ animationDelay: '0.4s', color: '#7a9eb5' }}
         >
-          Développeur IA &amp; Data
+          Développeur Web/mobile &amp; Cloud/Cybersécurité
         </p>
 
         <div
@@ -42,8 +42,8 @@ const Hero = () => {
           className="text-base md:text-lg italic max-w-sm mx-auto leading-relaxed animate-fade-up"
           style={{ animationDelay: '0.6s', color: 'rgba(240,236,228,0.6)' }}
         >
-          En soins infirmiers, on évalue avant d'agir.<br />
-          En dev, j'ai gardé ce réflexe.
+          En soins infirmiers, ma rigueur et mon engagement pour les autres étaient mes forces.<br /><br />
+          En dev, j'ai gardé cette mentalité.
         </p>
 
         <div

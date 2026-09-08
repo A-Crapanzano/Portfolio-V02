@@ -78,9 +78,8 @@ const Softskills = () => {
   return (
     <SectionCard id="softskills" title="Soft skills">
       <p className="mb-10 text-sm max-w-2xl" style={{ color: 'rgba(240,236,228,0.55)', lineHeight: '1.75' }}>
-        8 ans en soins infirmiers, une présidence d'association, un passage par l'enseignement -
-        chaque expérience a forgé des compétences humaines que peu de développeurs ont eues
-        l'occasion de construire aussi concrètement.
+        8 ans en soins infirmiers, une présidence d'association, un passage par l'enseignement.
+        Chaque expérience a forgé des compétences humaines fortes.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

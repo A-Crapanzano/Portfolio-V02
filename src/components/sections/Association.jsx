@@ -74,7 +74,7 @@ const Association = () => {
 
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(94,207,190,0.6)' }}>
-                Finale — Palais des Sports
+                Finale au Palais des Sports
               </p>
               <VideoEmbed
                 src="https://geo.dailymotion.com/player.html?video=x1st5dn"
@@ -91,13 +91,13 @@ const Association = () => {
             style={{ color: '#5ecfbe' }}
           >
             <Spotlight size={20} />
-            Blancarde Infirmier Marseille — "Le BIM"
+            Blancarde Infirmier Marseille : "Le BIM"
           </h4>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'rgba(94,207,190,0.6)' }}>
-                Gala — Sport Beach Marseille
+                Gala / Sport Beach Marseille
               </p>
               <VideoEmbed
                 src="https://www.youtube.com/embed/mKI23yAjmiQ?si=vYRPvVfT5n-7IWkX"
@@ -114,7 +114,7 @@ const Association = () => {
                 style={{ border: '1px solid rgba(94,207,190,0.1)' }}
               />
               <p style={{ color: 'rgba(240,236,228,0.65)', lineHeight: '1.75' }}>
-                La Présidence du BDE Blancarde Infirmier fut également une expérience très enrichissante. J'ai pu organiser avec mes collaborateurs différents événements — en majeure partie des soirées.
+                La Présidence du BDE Blancarde Infirmier fut également une expérience très enrichissante. J'ai pu organiser avec mes collaborateurs différents événements, en majeure partie des soirées.
               </p>
               <p style={{ color: 'rgba(240,236,228,0.65)', lineHeight: '1.75' }}>
                 L'événement le plus emblématique fut le premier <strong style={{ color: '#f0ece4' }}>Gala de l'école</strong> organisé au Sport Beach de Marseille.

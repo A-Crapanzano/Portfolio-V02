@@ -19,13 +19,13 @@ const Profil = () => {
               borderLeft: '4px solid #5ecfbe',
             }}
           >
-            En soins infirmiers, on évalue avant d'agir - en dev, j'ai gardé ce réflexe.
+            Soigner ou coder : dans les deux cas, il faut comprendre avant d'agir.
           </blockquote>
           <p style={{ color: 'rgba(240,236,228,0.65)', lineHeight: '1.75' }}>
             Attiré par les nouvelles technologies depuis l'adolescence, j'ai décidé de me reconvertir dans la tech avec la volonté d'allier mes compétences humaines à des savoir-faire technologiques.
           </p>
           <p style={{ color: 'rgba(240,236,228,0.65)', lineHeight: '1.75' }}>
-            J'ai intégré depuis septembre 2025 le Pré-Master of Science d'Epitech. J'ai un intérêt particulier pour l'IA et la Data.
+            J'ai intégré depuis septembre 2025 le Pré-Master of Science d'Epitech. J'ai un intérêt particulier pour le Cloud et la Cybersécurité.
           </p>
         </div>
       </div>

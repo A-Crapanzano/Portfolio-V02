@@ -9,7 +9,6 @@ const techLogos = [
   { src: '/images/react-native.svg',                             alt: 'React Native' },
   { src: '/images/python.png',                                   alt: 'Python' },
   { src: '/images/nestjs.svg',                                   alt: 'NestJS' },
-  { src: '/images/symfony_icon_137135.png',                      alt: 'Symfony' },
   { src: '/images/logo-docker-1.svg',                            alt: 'Docker' },
   { src: '/images/Git-logo.svg.png',                             alt: 'Git' },
 ];
@@ -20,7 +19,6 @@ const skills = [
   { label: 'React Native',              tags: ['Mobile'] },
   { label: 'Python',                     tags: ['IA', 'Data', 'Scripting'] },
   { label: 'NestJS',                     tags: ['Back-end', 'Node.js'] },
-  { label: 'Symfony · PHP',             tags: ['Back-end'] },
   { label: 'Docker · Git',              tags: ['DevOps', 'Outils'] },
 ];
 
